@@ -1,0 +1,15 @@
+*** SIGUSR2 not implemented, signal based restart unavailable!
+*** SIGUSR1 not implemented, signal based restart unavailable!
+*** SIGHUP not implemented, signal based logs reopening unavailable!
+Puma starting in single mode...
+* Puma version: 5.6.7 (ruby 3.0.6-p216) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 21916
+* Listening on http://0.0.0.0:3000
+Use Ctrl-C to stop
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2024-02-01 16:04:45 +0900 ===
+- Goodbye!
+バッチ ジョブを終了しますか (Y/N)? 

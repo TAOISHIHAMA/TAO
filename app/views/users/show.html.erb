@@ -1,0 +1,41 @@
+<h1>マイページ</h1>
+名前
+<br>
+<%= @user.name %>
+<br>
+メールアドレス
+<br>
+<%= @user.email %>
+<br>
+プロフィール
+<br>
+<%= @user.profile %>
+<br>
+<% if current_user.id == @user.id %>
+  <%= link_to "プロフィールを編集する", edit_user_registration_path %>
+<% end %>
+
+<h2>自身の投稿</h2>
+<% @user.taos.each do |tao| %>
+  <%= link_to "編集する", edit_tao_path(tao.id) %>
+  <%= button_to "削除する", tao_path(tao.id), method: :delete %>
+  <br>
+  <%= image_tag tao.image_url, size: "250x200" if tao.image? %>
+  <br>
+  <%= tao.goods %>
+  <br>
+  <%= tao.user.name %>
+  <br>
+  詳細
+  <br>
+  <%= tao.goodscoment %>
+  <br>
+  コメント
+  <br>
+  
+  
+<% end %>
+<br>
+<%= link_to "投稿一覧に戻る", taos_path %>
+
+

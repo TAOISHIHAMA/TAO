@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>廃版検索</title>
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+  <h1 style="display: inline-block;">廃版検索</h1>
+  <ul class="header-list" style="display: inline-block;">
+  <div class="header-list">
+  <% if user_signed_in? %>
+  <h2><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></h2>
+    <% else %>
+    <h3 style="display: inline-block;"><%= button_to '新規登録', new_user_registration_path %></h3>
+    <h4 style="display: inline-block;"><%= button_to 'ログイン', new_user_session_path %></h4>
+    <% end %>
+    <div>
+  </header>
+  <main>
+  <%= yield %>
+  </main>
+</body>
+</html>

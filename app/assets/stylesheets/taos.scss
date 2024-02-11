@@ -1,0 +1,163 @@
+// Place all the styles related to the taos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.taov {
+    font-size: 15px;
+}
+
+.taos-container h1 {
+    color: blue;
+    font-size: 13px;
+    margin-left: 670px;
+}
+
+.taos-container h2 {
+    color: blue;
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+.button {
+    display: inline-block;
+    font-size: 8pt;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 7px;
+    background: #00007f;
+    color: #ffffff;
+    line-height: 1em;
+    transition: .3s;
+    box-shadow: 1px 1px 3px #666666;
+    border: 2px solid #00007f;
+}
+
+.button:hover {
+    box-shadow: none;
+    counter-reset: #00007f;
+    background: #ffffff; 
+    color: #00007f;
+}
+
+.comment-wrapper h41 {
+    margin-left: 10px;
+    color: #00007f;
+}
+
+.comment-button {
+    display: inline-block;
+    font-size: 8pt;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 7px;
+    background: #00007f;
+    color: #ffffff;
+    line-height: 1em;
+    transition: .3s;
+    box-shadow: 1px 1px 3px #666666;
+    border: 2px solid #00007f;
+}
+
+.comment-button:hover {
+    box-shadow: none;
+    counter-reset: #00007f;
+    background: #ffffff;
+    color: #00007f;
+}
+
+.taoa h43 {
+    color: #00007f;
+}
+
+.tao1 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.tao2{
+    border-bottom:1px solid black;
+    
+}
+
+.tao {
+    border: 1px solid black;
+    width: 33%; 
+    margin: 0px; 
+}
+
+.user-details {
+    border-bottom: 1px solid black;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+    border: 1px solid black;
+    margin: 8px 20px 0px 20px;
+    font-size: 13px;
+}
+
+.tao3{
+    border: 1px solid black;
+    margin: 8px 10px 0px 10px;
+}
+
+.tao4{
+    display: flex;
+    margin: 8px 0px 0px 8px;
+}
+
+.tao5{
+    text-align: end;
+    margin: 0px 6px 3px 0px;
+}
+
+.tao2 h4{
+    margin: 0px;
+}
+
+.tao6{
+    margin-left: 15px;
+    color: red;
+}
+
+.search1{
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.search{
+    
+}
+
+.tao11 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.tao12{
+    border-bottom:1px solid black;
+    
+}
+
+.tao10 {
+    border: 1px solid black;
+    width: 100%; 
+    margin: 0px; 
+}
+
+.user-details1 {
+    border-bottom: 1px solid black;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+    border: 1px solid black;
+    margin: 8px 20px 0px 20px;
+    font-size: 13px;
+}
+
+.tao13{
+    border: 1px solid black;
+    margin: 8px 10px 0px 10px;
+}
+
+.taoc{
+    border: 1px solid black;
+}

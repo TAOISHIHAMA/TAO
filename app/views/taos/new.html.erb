@@ -1,0 +1,49 @@
+
+<%= form_for @tao, html: { multipart: true } do |f| %>
+  <div class="field">
+  <%= f.label :goods, "商品情報の入力" %>
+  <%= f.submit "投稿する", class: "button" %>
+</div>
+  <br>
+  
+  <div class="field">
+  <%= f.label :goods, "商品名" %>
+  <%= f.text_field :goods, size: 55 %>
+</div>
+  
+  <div class="field">
+    <%= f.label :商品画像 %>
+    <%= f.file_field :image, id: "image-input" %>
+    <br>
+    <div id="new-image"></div>
+    ファイルの画像表示したい
+    <br>
+  </div>
+  
+  <div class="area">
+    <label>詳細</label>
+    <%= f.text_area :goodscoment, rows: 4, cols: 58 %>
+  </div>
+<% end %>
+
+<script>
+  document.getElementById('image-input').addEventListener('change', function(event) {
+    var file = event.target.files[0];
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      var img = document.createElement('img');
+      img.src = e.target.result;
+      img.width = 250;
+      img.height = 200;
+      
+      var newImageContainer = document.getElementById('new-image');
+      newImageContainer.innerHTML = ''; // 既存のプレビューをクリア
+      newImageContainer.appendChild(img); // 新しいプレビューを追加
+    };
+    
+    reader.readAsDataURL(file);
+  });
+</script>
+
+<%= link_to "投稿一覧に戻る", taos_path %>

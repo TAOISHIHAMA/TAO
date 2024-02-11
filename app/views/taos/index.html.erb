@@ -1,0 +1,43 @@
+
+<div class="taos-container">
+<% if user_signed_in? %>
+<h1 style="display:inline"><%= link_to "マイページへ", user_path(current_user.id) %></h1>
+<h2 style="display:inline"><%= link_to "新規投稿へ", new_tao_path %></h2>
+<% end %>
+
+<div class="search">
+<p style="display:inline;">
+<%= form_tag({controller:"taos",action:"index"}, method: :get) do %>
+  <%= text_field_tag :search, nil, size: 50 %>
+  <div class="search1">
+  <%= submit_tag '検索する', class: 'button' %>
+  </div>
+<% end %>
+</p>
+</div>
+
+<div class="tao1">
+  <% @taos.each do |t| %>
+    <div class="tao">
+      <div class="tao2">
+      <h4><%= image_tag t.image_url, size: "250x200" if t.image? %></h4>
+      </div>
+        <div class="tao3">
+        <%= t.goods %>
+        </div>
+          <div class="user-details">
+          <%= link_to t.user.name, user_path(t.user.id) %>
+          </div>
+            <div class="tao4">
+            <%= link_to "編集する", edit_tao_path(t.id) %>
+              <div class="tao6">
+              <%= button_to "削除する", tao_path(t.id), method: :delete %>
+              </div>
+            </div>
+              <div class="tao5">
+              <%= link_to "詳細へ", tao_path(t.id) %>
+              </div>
+    </div>
+  <% end %>
+</div>
+

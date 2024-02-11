@@ -1,0 +1,46 @@
+<h1>廃版検索</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @tao do |f| %>
+
+    # データ型がstringで自由記述の入力フォーム
+    <div class="field">
+      <%= f.label :名前 %>
+      <%= f.text_field :name, :size => 30 %>
+    </div>
+  
+     <div class="field">
+     <%= f.label :メールアドレス %>
+     <%= f.text_field :email, :size => 30 %>
+   </div>
+
+    <div class="field">
+      <%= f.label :パスワード %>
+      <%= f.text_field :passward, :size => 30 %>
+    </div>
+
+     <div class="field">
+     <%= f.label :商品名 %>
+     <%= f.text_field :goods, :size => 30 %>
+   </div>
+ 
+  
+# データ型がtextで自由記述の入力フォーム
+    <div class="field">
+      <%= f.label :商品説明  %>
+      <%= f.text_area :goodscoment, :size => "30x2" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :プロフィール  %>
+      <%= f.text_area :usercoments, :size => "30x2" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :DM  %>
+      <%= f.text_area :dmcoment, :size => "30x2" %>
+    </div>
+  
+    <%= f.submit "投稿する" %>
+  <% end %>
+  
+  <%= link_to "一覧に戻る", narus_path %>

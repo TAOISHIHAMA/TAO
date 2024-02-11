@@ -1,0 +1,38 @@
+<%= form_for @tao do |f| %>
+  <bodyedit>
+  <div class="field">
+  <h10 style="display:inline"><%= f.label :商品情報の編集 %></20>
+  <h11 style="display:inline"><%= f.submit :編集完了 , class: "button"%></21>
+</div>
+
+
+
+<div class="field">
+  <h22 style="display:inline"><%= f.label :商品名 %></h22>
+</div>
+
+<div class="field">
+<h23 style="display:inline"><%= f.text_field :goods, :size => 55 %></h23>
+</div>
+
+    <div class="field">
+    <%= f.label :商品画像 %>
+    <%= f.file_field :image %>
+    <br>
+ファイルの画像表示したい
+<br>
+<div>
+
+<div class="area">
+詳細
+<br>
+<h24 style="display:inline"><%= f.text_area :goodscoment, rows: 4, cols: 58 %></h24>
+</div>
+<% if user_signed_in? %>
+    <%= form_with(model: [@tao, @comment], local: true) do |f| %>
+      <%= f.label :コメントをする %>
+  <% end %>
+  <bodyedit>
+  
+  <%= link_to "一覧に戻る", taos_path %>
+  <%= link_to "マイページへ戻る", user_path(current_user.id) %>

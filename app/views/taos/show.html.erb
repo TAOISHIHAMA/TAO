@@ -1,0 +1,54 @@
+
+<div class="taoa">
+  <h43 style="display:inline"><%= @tao.updated_at %></h43>
+</div>
+
+      
+      <div class="tao11">
+        <div class="tao10">
+          <div class="tao12">
+          <h4><%= image_tag @tao.image_url, size: "250x200" if @tao.image? %></h4>
+          </div>
+            <div class="tao13">
+            <%= @tao.goods %>
+            </div>
+              <div class="user-details1">
+              <%= link_to @tao.user.name, user_path(@tao.user.id) %>
+              </div>
+      
+
+<div class="taov">
+詳細
+</div>
+
+
+<div class="taoc">
+  <%= @tao.goodscoment %>
+</div>
+
+
+
+<div class="comment-wrapper">
+  <p>コメント一覧</p>
+  <% @comments.each do |c| %>
+    <div>
+      <%= c.user.name unless c.user.blank? %>
+      <br>
+      <%= c.content %>
+      <h41 style="display:inline"><%= c.updated_at %></h41>
+    </div>
+      <br>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@tao, @comment], local: true) do |f| %>
+      <%= f.label :コメントをする %>
+      <br>
+      <%= f.text_area :content, rows: 4, cols: 100 %>
+      <%= button_tag type: "submit", class: "comment-button" do %>
+        <h40 style="display:inline"><i class="far fa-comments"></i> コメントする<h40>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+<%= link_to "投稿一覧に戻る", taos_path %>
