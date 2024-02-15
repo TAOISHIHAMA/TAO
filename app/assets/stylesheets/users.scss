@@ -1,3 +1,47 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.show-my{
+    text-align: center; 
+    margin: auto; 
+    width: fit-content; 
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.show-name{
+    border: 1px solid black;
+    display: flex;
+    margin-bottom: 0px;
+    padding: 2px;
+    width: 250px;
+}
+
+.show-name0{
+    font-size: 14px;
+}
+
+.show-mail{
+    border: 1px solid black;
+    display: flex;
+    margin-bottom: 0px;
+    padding: 2px;
+    width: 250px;
+}
+
+.show-mail0{
+    font-size: 14px;
+}
+
+.show-profile{
+    border: 1px solid black;
+    display: flex;
+    margin-bottom: 0px;
+    padding: 2px;
+    width: 250px;
+}
+
+.show-profile0{
+    font-size: 14px;
+}

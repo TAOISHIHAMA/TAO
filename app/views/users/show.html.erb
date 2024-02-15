@@ -1,19 +1,33 @@
-<h1>マイページ</h1>
-名前
-<br>
-<%= @user.name %>
-<br>
-メールアドレス
-<br>
-<%= @user.email %>
-<br>
-プロフィール
-<br>
-<%= @user.profile %>
-<br>
-<% if current_user.id == @user.id %>
-  <%= link_to "プロフィールを編集する", edit_user_registration_path %>
-<% end %>
+<div class="show-profile">
+  <div class="show-my">
+    マイページ
+  </div>
+  <br>
+  <div class="show-name0">
+    名前
+  </div>
+  <div class="show-name">
+    <%= @user.name %>
+  </div>
+  <br>
+  <div class="show-mail0">
+    メールアドレス
+  </div>
+  <div class="show-mail">
+    <%= @user.email %>
+  </div>
+  <br>
+  <div class="show-profile0">
+    プロフィール
+  </div>
+  <div class="show-profile0">
+  <%= @user.profile %>
+  </div>
+  <br>
+  <% if current_user.id == @user.id %>
+    <%= link_to "プロフィールを編集する", edit_user_registration_path %>
+  <% end %>
+</div>
 
 <h2>自身の投稿</h2>
 <% @user.taos.each do |tao| %>
@@ -32,10 +46,8 @@
   <br>
   コメント
   <br>
-  
-  
 <% end %>
+
 <br>
 <%= link_to "投稿一覧に戻る", taos_path %>
-
 
